@@ -21,7 +21,13 @@ export default async function SingleBlog({params}) {
           <a>{blog.category}</a></div>)})}</div>
       </main>
 
-      <div className="commentComponent"><LeaveComment /></div> 
+      <div className="commentComponent">
+          {comments.rows.map((comment) => 
+          {return ( <p key={comment.id}>{comment.comment_content}</p>)})}
+
+        <LeaveComment />
+      </div>
+       
     </div> )
 }
 
