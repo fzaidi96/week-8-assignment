@@ -10,9 +10,8 @@ export default async function Blog() {
         <p>The user sees the list of blogs here</p>
         <div className="blogs">
           {blogs.rows.map((blog) => {return (<div key={blog.title} className="title">
-         <Link href="/"><h3>{blog.title}</h3></Link></div>)})}
+         <Link href={`/urls/blog/${blog.id}`}><h3>{blog.title}</h3></Link></div>)})}
         </div>
       </main>
     )
 }
-
