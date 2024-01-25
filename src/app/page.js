@@ -4,10 +4,10 @@ import hero from "@/../public/hero.JPG";
 
 export default function Home() {
   return (
-    <main className={styles.main}>
-      <h1>This is the home page of the blog</h1>
+    <main className={styles.home}>
+      <h1>This is the homepage </h1>
       <p>insert hero image</p>
-      <p>insert other homepage content maybe cta</p>
+      <p>insert other homepage content</p>
     </main>
   );
 }

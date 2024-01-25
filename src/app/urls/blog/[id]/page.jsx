@@ -1,34 +1,34 @@
+import styles from "@/app/page.module.css";
 import LeaveComment from "@/components/LeaveComment";
 import { sql } from "@vercel/postgres";
 
 export default async function SingleBlog({params}) {
   
-  const blog_post_no = params.id
+  const blog_no = params.id
 
-  const blogs = await sql`SELECT * FROM blog_posts WHERE id = ${blog_post_no}`;
-  const comments = await sql`SELECT * FROM comments where post_id = ${blog_post_no}`;
+  const blogs = await sql`SELECT * FROM blog_posts WHERE id = ${blog_no}`;
+  const comments = await sql`SELECT * FROM comments where post_id = ${blog_no}`;
   
     return (
     <div>
-      <main className="singleBlog">
-        <p>The user can read the blog that they selected here</p>
+      <main className={styles.singleBlog}>
 
-        <div>
+        <div className={styles.blogText}>
         {blogs.rows.map((blog) => 
         {return (<div key={blog.id}>
           <h2>{blog.title}</h2>
-          <p>{blog.content}</p>
-          <a>{blog.category}</a></div>)})}</div>
+          <p>The user can read the blog that they selected here</p>
+          <p>{blog.content}</p> 
+
+          <a href="/"className={styles.categoryTags}>{blog.category}</a></div>)})}</div>
+
+          <div className={styles.comments}>
+              <LeaveComment />
+              <div>{comments.rows.map((comment) => 
+                    {return ( <li key={comment.id}>{comment.comment_content}</li>)})}</div>
+          </div>
       </main>
 
-      <div className="commentComponent">
-        <LeaveComment />
-
-        <h6>user comments</h6>
-        {comments.rows.map((comment) => 
-          {return ( <p key={comment.id}>{comment.comment_content}</p>)})}
-      </div>
-       
     </div> )
 }
 

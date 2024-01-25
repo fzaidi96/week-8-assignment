@@ -1,12 +1,45 @@
-.main {
+.home,
+.about {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
   min-height: 100vh;
+}
+
+.home h1,
+.about h1 {
+  font-size: 200px;
+  padding-top: 2rem;
   color: #98bef4;
 }
 
-.main h1 {
-  padding-top: 10rem;
+
+.singleBlog {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  text-align: center;
 }
+
+.comments {
+  padding: 4rem ;
+  border: solid#98bef4;
+  border-radius: 30px;
+}
+
+.comments li {
+  font-family: serif;
+}
+
+.blogText {
+  height: 100vh;
+}
+
+.blogText h2 {
+  padding-bottom: 3.5rem;
+  color: #9a3030;
+  font-size: 200px;
+}
+
