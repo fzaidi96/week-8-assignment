@@ -12,7 +12,7 @@ export default function LeaveComment() {
       <form action={handleLeaveComment}>
         <textarea name="comment" id="comment" required></textarea>
         <button type="submit">Submit</button>
-      </form> 
+      </form>
     </div>
   );
 }

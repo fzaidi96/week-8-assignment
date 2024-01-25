@@ -17,15 +17,15 @@ export default async function SingleBlog({params}) {
         {blogs.rows.map((blog) => 
         {return (<div key={blog.id}>
           <h2>{blog.title}</h2>
+          <a href="/"className={styles.categoryTags}>#{blog.category}</a>
           <p>The user can read the blog that they selected here</p>
-          <p>{blog.content}</p> 
-
-          <a href="/"className={styles.categoryTags}>{blog.category}</a></div>)})}</div>
+          <p>{blog.content}</p></div>)})}</div>
 
           <div className={styles.comments}>
               <LeaveComment />
+              <p>---------------------</p>
               <div>{comments.rows.map((comment) => 
-                    {return ( <li key={comment.id}>{comment.comment_content}</li>)})}</div>
+                    {return (<li key={comment.id}>{comment.comment_content}</li>)})}</div>
           </div>
       </main>
 
