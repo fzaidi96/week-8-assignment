@@ -38,6 +38,7 @@ export default async function SingleBlog({params}) {
                       </div>)})}
           </div>
         </div>
+        <Link href="/urls/blog"><h6>check out the rest of our posts here</h6></Link>
       </main>
     </div> )
 }
