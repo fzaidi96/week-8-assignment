@@ -30,6 +30,8 @@ nav {
   flex-direction: row;
   align-items: center;
   position: fixed;
+  z-index: 5;
+  background-color: transparent;
 }
 
 .header nav {
@@ -46,7 +48,11 @@ button {
   background-color: #e1f390;
   color: #9a3030;
   font-size: 16px;
+}
 
+button:hover {
+  transform: scale(1.05); 
+  transition: transform 0.3s ease; 
 }
 
 .footer {
@@ -60,6 +66,5 @@ main {
   height: 100vh;
   padding-bottom: 2rem;
 }
-
 
 

@@ -6,8 +6,8 @@ import PageFooter from "@/components/PageFooter";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
-  title: "Week 8 Assignment",
-  description: "Blog website",
+  title: "Home | silly goose",
+  description: "week 8 assignment",
 };
 
 export default function RootLayout({ children }) {

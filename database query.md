@@ -9,7 +9,7 @@ INSERT INTO blog_posts (id, title, content, category) VALUES (4, 'blog post 4', 
 
 
 CREATE TABLE comments (
-    id INT PRIMARY KEY,
+    id SERIAL PRIMARY KEY,
     post_id INT,
     comment_content TEXT NOT NULL,
     FOREIGN KEY (post_id) REFERENCES blog_posts(id)
