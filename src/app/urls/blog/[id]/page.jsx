@@ -4,10 +4,12 @@ import { sql } from "@vercel/postgres";
 import ProgressBar from "@/components/ProgressBar";
 import Link from "next/link";
 
-export const metadata = {
-  title: "Blog Post | silly goose",
-};
-
+export async function generateMetadata({ params }) {
+  const blog_no = params.id;
+  return {
+    title: `Blog ${blog_no} | silly goose`,
+  }
+}
 export default async function SingleBlog({params}) {
   
   const blog_no = params.id
@@ -29,10 +31,13 @@ export default async function SingleBlog({params}) {
 
           <div className={styles.comments}>
               <LeaveComment blog_no={blog_no}/>
-              <p>---------------------</p>
-              <div>{comments.rows.map((comment) => 
-                    {return (<li key={comment.id}>{comment.comment_content}</li>)})}</div>
+                  <p>---------------------</p>
+                    <div>{comments.rows.map((comment) => 
+                        {return (<div key={comment.id}>
+                          <li>{comment.comment_content}</li>
+                      </div>)})}
           </div>
+        </div>
       </main>
     </div> )
 }
