@@ -11,7 +11,7 @@
 .about h1 {
   font-size: 200px;
   padding-top: 2rem;
-  color: #98bef4;
+  color: #DB5461;
 }
 
 .blogFeed {
@@ -23,8 +23,8 @@
 
 .blogFeed p {
   font-size: 200px;
-  background-color:#9a3030;
-  color: #98bef4;
+  background-color:#E3F2FD;
+  color: #DB5461;
   padding: 1rem;
   border-radius: 10px;
   margin-bottom: 2rem;
@@ -38,14 +38,14 @@
 
 .blogFeed h3 {
   padding: 1rem;
-  border: solid 1px #9a3030;
-  background-color: #98bef4;
+  border: solid 1px #DB5461;
+  background-color: #E3F2FD;
   border-radius: 5px;
-  color: #fcf6ed;}
+  color: black;}
 
 .blogFeed h2 {
   padding-bottom: 3rem;
-  color: #9a3030;
+  color: #DB5461;
 }
 
 .blogFeed h6 {
@@ -66,14 +66,14 @@
 
 .blogText h2 {
   padding-bottom: 0.5rem;
-  color: #9a3030;
+  color: #8AA29E;
   font-size: 200px;
 }
 
 .comments {
   width: 500px;
-  border: solid#98bef4;
-  background-color: #98bef4;
+  border: solid #E3F2FD 1px;
+  background-color: #E3F2FD;
   border-radius: 30px;
 }
 .comments form {
@@ -85,7 +85,7 @@
 
 .comments textarea {
   border-radius: 5px;
-  border: 0.5px solid #9a3030;
+  border: 0.5px solid black;
 }
 
 .comments h4{
@@ -99,7 +99,7 @@
 
 .comments li {
   font-family: serif;
-  color: #9a3030;
+  color: black;
   padding-bottom:0.5rem;
 }
 
